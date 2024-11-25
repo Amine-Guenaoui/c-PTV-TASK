@@ -1,14 +1,29 @@
 services:
-  postgres:
-    image: postgres:latest
-    container_name: postgres-db
+  api:
+    image: your-api-image  # Replace with your actual API image or Dockerfile context
+    ports:
+      - "5232:5232"
+    environment:
+      - DB_CONNECTION_STRING=postgres://postgres:password@postgres-db:5432/streetservice
+    depends_on:
+      - postgres-db
+
+  postgres-db:
+    image: postgis/postgis:latest  # Use the PostGIS image
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: streetservice
     ports:
-      - "5432:5432"
+      - "5432:5432"  # Expose port 5432 for access to the database
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data  # Ensure data is persisted
+    networks:
+      - default
+
 volumes:
-  postgres_data:
+  postgres-data:  # Volume to persist database data
+
+networks:
+  default:
+    driver: bridge  # You can define your network settings here if needed
