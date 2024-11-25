@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "eplavMbK8a5yHRkwnaub7lxKnwylkhJZT+sr8KkJ6u4=",
+  "Source": "StreetService.API",
+  "BasePath": "_content/StreetService.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

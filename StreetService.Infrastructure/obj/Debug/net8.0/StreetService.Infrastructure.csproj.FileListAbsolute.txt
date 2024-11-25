@@ -1,0 +1,17 @@
+D:\Job\StreetService\StreetService.Infrastructure\bin\Debug\net8.0\StreetService.Infrastructure.deps.json
+D:\Job\StreetService\StreetService.Infrastructure\bin\Debug\net8.0\StreetService.Infrastructure.dll
+D:\Job\StreetService\StreetService.Infrastructure\bin\Debug\net8.0\StreetService.Infrastructure.pdb
+D:\Job\StreetService\StreetService.Infrastructure\bin\Debug\net8.0\StreetService.Core.dll
+D:\Job\StreetService\StreetService.Infrastructure\bin\Debug\net8.0\StreetService.Core.pdb
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.csproj.AssemblyReference.cache
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.AssemblyInfoInputs.cache
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.AssemblyInfo.cs
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\EFCoreNpgsqlNetTopologySuite.cs
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.sourcelink.json
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetSe.3E8FAC8A.Up2Date
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.dll
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\refint\StreetService.Infrastructure.dll
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.pdb
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\ref\StreetService.Infrastructure.dll

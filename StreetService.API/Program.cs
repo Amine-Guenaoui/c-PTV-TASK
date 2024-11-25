@@ -1,16 +1,43 @@
+// using StreetService.Infrastructure;
+
+// var builder = WebApplication.CreateBuilder(args);
+
+// // // Add services to the container.
+
+// builder.Services.AddControllers();
+// builder.Services.AddInfrastructure(builder.Configuration.GetConnectionString("DefaultConnection"));
+
+
+// var app = builder.Build();
+// app.MapControllers();
+// app.Run();
+
 using StreetService.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// // Add services to the container.
-
+// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddInfrastructure(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 
+//swagger 
+// Add Swagger services
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
+// Enable Swagger UI in the app
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();  // Enables the Swagger API documentation
+    app.UseSwaggerUI();  // Enables the Swagger UI for interactive API testing
+}
+
 app.MapControllers();
 app.Run();
+
 // // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 // builder.Services.AddEndpointsApiExplorer();
 // builder.Services.AddSwaggerGen();
