@@ -1,0 +1,15 @@
+D:\Job\StreetService\StreetService.Core\bin\Release\net8.0\StreetService.Core.deps.json
+D:\Job\StreetService\StreetService.Core\bin\Release\net8.0\StreetService.Core.runtimeconfig.json
+D:\Job\StreetService\StreetService.Core\bin\Release\net8.0\StreetService.Core.dll
+D:\Job\StreetService\StreetService.Core\bin\Release\net8.0\StreetService.Core.pdb
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\StreetService.Core.csproj.AssemblyReference.cache
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\StreetService.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\StreetService.Core.AssemblyInfoInputs.cache
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\StreetService.Core.AssemblyInfo.cs
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\StreetService.Core.csproj.CoreCompileInputs.cache
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\StreetService.Core.sourcelink.json
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\StreetService.Core.dll
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\refint\StreetService.Core.dll
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\StreetService.Core.pdb
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\StreetService.Core.genruntimeconfig.cache
+D:\Job\StreetService\StreetService.Core\obj\Release\net8.0\ref\StreetService.Core.dll

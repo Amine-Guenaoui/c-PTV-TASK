@@ -23,11 +23,11 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Enable Swagger UI in the app
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();  // Enables the Swagger API documentation
     app.UseSwaggerUI();  // Enables the Swagger UI for interactive API testing
-}
+// }
 
 app.MapControllers();
 app.Run();
