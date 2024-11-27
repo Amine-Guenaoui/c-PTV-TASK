@@ -1,4 +1,13 @@
 services:
+  streetservice-api:
+    image: streetservice-api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+    networks:
+      - streetservice-network
+
   postgres:
     image: postgis/postgis:latest
     hostname: c4fd1d6fc275
@@ -10,6 +19,12 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - streetservice-network
 
 volumes:
   postgres_data:
+
+networks:
+  streetservice-network:
+    driver: bridge

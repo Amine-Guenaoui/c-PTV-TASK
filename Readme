@@ -22,7 +22,7 @@ you can use post and paste this json in the swagger
 
 // test adding : 
 {
-id: 3,
+ "id": 1,
   "name": "Example Street",
   "geometry": {
     "type": "LineString",
@@ -40,4 +40,8 @@ and then update it in swagger
 
 // to run full project : 
 docker build -t streetservice-api .
+dockercomose up 
+
+
+
 
