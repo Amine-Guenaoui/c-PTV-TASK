@@ -2,6 +2,67 @@
 
 This project implements a service in .NET with a REST API for managing street data. It provides endpoints to create, delete, and update street geometries, stored in a PostgreSQL database with PostGIS. The application uses Entity Framework Core for data persistence.
 
+## Task Breakdown and Implementation
+
+1. **Create a service in .NET with a REST API for 'Street' resource**  
+   The first task involved creating a .NET service that exposes a REST API to manage a `Street` resource. A `Street` has the following properties:
+   - **Name**: The name of the street.
+   - **Geometry**: A GeoJSON-based geometry that defines the shape of the street.
+   - **Capacity**: The number of vehicles that can use the street within a minute.
+
+   We designed the API with the following endpoints:
+   - **POST /streets**: Creates a new street resource.
+   - **DELETE /streets/{id}**: Deletes a street resource by its ID.
+
+   We used **ASP.NET Core** for the web service and **Entity Framework (EF) Core** for interacting with the database.
+
+2. **Storing street data in PostgreSQL with PostGIS**  
+   The street data is stored in a **PostgreSQL** database, and we made use of the **PostGIS** extension to handle spatial data (geometry).  
+   We used **EF Core** to interact with the database, and the model for the street resource was created as follows:
+   - **Street.cs**: The model represents the street entity with properties like `Name`, `Geometry`, and `Capacity`.
+   - We created a **DbContext** class (`AppDbContext.cs`) to handle database operations and migrations.
+   - The database schema was generated using **EF migrations**, which allowed us to manage changes to the database structure.
+
+3. **Implement an endpoint to add a single point to the geometry of an existing street**  
+   We implemented an endpoint to add a single point to the geometry of an existing street, either at the beginning or the end, depending on the user's choice.  
+   The logic for determining where to add the point was based on the geometry's existing coordinates:
+   - If the point was to be added at the beginning, it was appended to the start of the `LineString`.
+   - If the point was to be added at the end, it was appended to the end of the `LineString`.
+
+   This endpoint was designed to handle race conditions that could occur when multiple requests try to modify the geometry of the same street simultaneously. We used **transactions** and **optimistic concurrency** control to ensure data consistency and avoid conflicts.
+
+4. **Add a feature flag for deciding where the operation is performed**  
+   We added a hidden feature flag to control whether the point addition operation would be executed:
+   - **On the database level**: Using **PostGIS** functions for spatial data manipulation directly in the database.
+   - **Within the backend code**: Implementing the logic algorithmically within the application code.
+
+   The feature flag allows us to toggle between these two approaches based on specific requirements or performance considerations. This was achieved through a configuration setting in the **appsettings.json** file.
+
+5. **Create a Docker file and a Kubernetes manifest for deployment**  
+   To deploy the application in a containerized environment, we created the following:
+   - **Dockerfile**: This file builds the .NET API into a Docker container. It installs the necessary dependencies and sets up the environment for running the API.
+   - **Kubernetes Manifest**: We created a Kubernetes deployment manifest to deploy the application as a service with **3 replicas**. This ensures high availability and load balancing across the replicas.
+
+   The manifest includes:
+   - **Deployment**: Defines the number of replicas (3) and the container image for the application.
+   - **Service**: Exposes the API to other services within the Kubernetes cluster.
+
+6. **Create a Docker Compose file for local testing**  
+   To simplify local development and testing, we added a **docker-compose.yml** file. This file defines the services needed to run the application, including:
+   - The **API** service (the .NET application container).
+   - The **PostgreSQL** service with **PostGIS** enabled.
+
+   The `docker-compose.yml` file allows us to quickly start up the environment with the following command:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+   This setup allows us to test the application locally before deploying it to production.
+
+### Conclusion
+By following these tasks, we created a full-stack solution that uses **.NET Core**, **EF Core**, **PostgreSQL**, **PostGIS**, **Docker**, and **Kubernetes** to provide a scalable and reliable API for managing street data. The API includes robust handling for spatial data and offers flexibility through a feature flag, enabling us to switch between database and backend processing for spatial operations.
+
 ## Project Organization
 
 ```plaintext
