@@ -15,3 +15,5 @@ D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService
 D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\refint\StreetService.Infrastructure.dll
 D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.pdb
 D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\ref\StreetService.Infrastructure.dll
+D:\Job\StreetService\StreetService.Infrastructure\bin\Debug\net8.0\StreetService.Infrastructure.runtimeconfig.json
+D:\Job\StreetService\StreetService.Infrastructure\obj\Debug\net8.0\StreetService.Infrastructure.genruntimeconfig.cache

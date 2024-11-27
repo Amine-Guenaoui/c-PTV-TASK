@@ -26,9 +26,20 @@ public class StreetRepository : IStreetRepository
 
     public async Task UpdateAsync(Street street)
     {
-        _context.Streets.Update(street);
-        await _context.SaveChangesAsync();
+        // _context.Streets.Update(street);
+        // await _context.SaveChangesAsync();
+        try
+        {
+            _context.Streets.Update(street);
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            // Handle concurrency exception (if the version has changed in the database)
+            throw new InvalidOperationException("Concurrency conflict occurred. The street has been updated by another user.");
+        }
     }
+    
 
     public async Task DeleteAsync(int id)
     {

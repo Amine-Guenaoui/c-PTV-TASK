@@ -7,6 +7,8 @@ docker run --name postgres-db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=you
 
  to run the first migration : ( in case it doesn't work run the migration using the full path )
  dotnet ef migrations add InitialCreate --project D:\Job\StreetService\StreetService.Infrastructure\StreetService.Infrastructure.csproj --startup-project D:\Job\StreetService\StreetService.API\StreetService.API.csproj
+ dotnet ef migrations add AddPointToStreetGeometry --project D:\Job\StreetService\StreetService.Infrastructure\StreetService.Infrastructure.csproj --startup-project D:\Job\StreetService\StreetService.API\StreetService.API.csproj
+ 
  and then update the database : 
  dotnet ef database update --project D:\Job\StreetService\StreetService.Infrastructure --startup-project D:\Job\StreetService\StreetService.API 
 
@@ -18,14 +20,14 @@ dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 8.0.0
 
 // test adding : 
 {
-  "id": 1,
-  "name": "Main Street",
-  "capacity": 100,
+id: 3,
+  "name": "Example Street",
   "geometry": {
-    "type": "Point",
+    "type": "LineString",
     "coordinates": [
-      102,
-      0.5
+      [10.0, 20.0],
+      [15.0, 25.0],
+      [20.0, 30.0]
     ]
   }
 }
