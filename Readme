@@ -3,4 +3,14 @@ docker run --name postgres-db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=you
  
  docker exec -it postgres-db psql -U postgres -d streetservice
 
- 
+ or just run : docker-composer up -d 
+
+ to run the first migration : ( in case it doesn't work run the migration using the full path )
+ dotnet ef migrations add InitialCreate --project D:\Job\StreetService\StreetService.Infrastructure\StreetService.Infrastructure.csproj --startup-project D:\Job\StreetService\StreetService.API\StreetService.API.csproj
+ and then update the database : 
+ dotnet ef database update --project D:\Job\StreetService\StreetService.Infrastructure --startup-project D:\Job\StreetService\StreetService.API 
+
+to run the project : 
+navigate to StreetService and then run  : dotnet run --project StreetService.API
+install : 
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 8.0.0
