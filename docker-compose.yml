@@ -1,16 +1,20 @@
 services:
   streetservice-api:
-    image: streetservice-api
+    build: .
     ports:
       - "5000:5000"
     depends_on:
       - postgres
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Username=postgres;Password=password;Database=streetservice
     networks:
       - streetservice-network
+    command: >
+      bash -c "dotnet ef database update && dotnet StreetService.API.dll"
 
   postgres:
     image: postgis/postgis:latest
-    hostname: c4fd1d6fc275
     environment:
       POSTGRES_DB: streetservice
       POSTGRES_USER: postgres

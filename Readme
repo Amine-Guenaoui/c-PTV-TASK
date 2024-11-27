@@ -45,3 +45,16 @@ dockercomose up
 
 
 
+// to remove the docker images and containers and volumes : 
+docker-compose down --volumes  # Stop and remove the containers and volumes
+docker-compose up --build -d  # Rebuild and start the containers
+
+
+docker exec -it streetservice-streetservice-api-1 bash
+
+
+if the migration doesn't work automatically , change host to localhost and then postgres ( or the host that you want ) : 
+ "DefaultConnection": "Host=postgres;Port=5432;Database=streetservice;Username=postgres;Password=password"
+
+ and then run the migration command :
+  dotnet ef database update --project D:\Job\StreetService\StreetService.Infrastructure --startup-project D:\Job\StreetService\StreetService.API 
