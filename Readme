@@ -14,3 +14,21 @@ to run the project :
 navigate to StreetService and then run  : dotnet run --project StreetService.API
 install : 
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 8.0.0
+
+
+// test adding : 
+{
+  "id": 1,
+  "name": "Main Street",
+  "capacity": 100,
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      102,
+      0.5
+    ]
+  }
+}
+
+
+
