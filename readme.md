@@ -220,7 +220,7 @@ dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 8.0.0
 
 ### Step 5: Testing the API
 
-You can test the API using Swagger. To add a street, use the following JSON for a POST request:
+You can test the API using Swagger. To add a street, use the following JSON for a POST request: ( i have added a Collection file called PostManExample import it in PostMan)
 
 ```json
 {

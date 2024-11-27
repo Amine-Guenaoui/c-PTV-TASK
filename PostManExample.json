@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "53260889-a593-4e07-896b-75f429198d30",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18584602"
+	},
+	"item": [
+		{
+			"name": "GetStreet",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AddingStreet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n  \"name\": \"Second Street\",\r\n  \"geometry\": {\r\n    \"type\": \"LineString\",\r\n    \"coordinates\": [\r\n      [10.0, 20.0],\r\n      [15.0, 25.0],\r\n      [20.0, 30.0]\r\n    ]\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5232/api/Street",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5232",
+					"path": [
+						"api",
+						"Street"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddingPoint",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateStreet",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
